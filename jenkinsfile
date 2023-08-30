@@ -2,7 +2,6 @@ pipeline {
     agent any
     environment{
         GLOBEL = "globel-env"   //pipeline variable:All the stages can acces this
-        SSH_CRED = credentials('SSH_CRED') //secrete credentials such us username password keys etc..
     }
     stages{
         stage('stage 1'){
