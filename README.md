@@ -4,11 +4,12 @@ This the repository created to learn jenkins from basics to advance level of pip
 
 I am gonna concentrate on the pipe line based projects
 
-Pipe Line Types are folllowing 
-'''
-    v1: scripted pipe line 
+Pipline Types :
 
-    v2: DSL/ Declarative pipeline 
+```
+    v1 : Scripted Pipelines 
 
-    v3: YAML [still in the incubation phase ]
-'''
+    v2 : DSL / Declarative Pipelines
+
+    v3 : YAML [ Still in the development phase ]
+```
