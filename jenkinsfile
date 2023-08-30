@@ -1,5 +1,5 @@
 pipeline{
-    angent any
+    agent any
     environment{
         GLOBEL = "globel-env"   //supplying environment variable global it have stage 3 priority
     }
