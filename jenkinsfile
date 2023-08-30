@@ -1,4 +1,4 @@
-pipeline{
+pipeline {
     agent any
     environment{
         GLOBEL = "globel-env"   //pipeline variable:All the stages can acces this
@@ -15,6 +15,7 @@ pipeline{
             stage('stage 2'){
                 environment{
                     GLOBEL = "batch55"  //stage level variable: inside the stage can acces it will overide pipeline variable
+                }
                 steps{
                     sh "echo stage 2 hai"
                     sh "echo stage 2 shell comment"
@@ -26,10 +27,10 @@ pipeline{
                     sh ''' echo stage-3 hai
                            echo stage-3 shell comment
                            pwd
-                           env
-                       '''
+                           env '''                 
                 }
             }
         
+
     }
 } 
