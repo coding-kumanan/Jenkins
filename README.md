@@ -13,3 +13,9 @@ Pipline Types :
 
     v3 : YAML [ Still in the development phase ]
 ```
+### Naming Standard Of Jenkins Pipeline 
+
+```
+Pipelines are supposed to be enclosed in a file that end's with Jenkinsfile [ J as in caps ]
+
+```
