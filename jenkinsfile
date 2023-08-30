@@ -1,7 +1,8 @@
 pipeline{
     agent any
     environment{
-        GLOBEL = "globel-env"   //supplying environment variable global it have stage 3 priority
+        GLOBEL = "globel-env"   //pipeline variable:All the stages can acces this
+        SSH_CRED = credentials('SSH_CRED') //secrete credentials such us username password keys etc..
     }
     stages{
         stage('stage 1'){
@@ -13,19 +14,20 @@ pipeline{
         }
             stage('stage 2'){
                 environment{
-                    BATCH = "batch55"  //supplying environment variable inside the stage it have stage 2 priority
-                }
+                    GLOBEL = "batch55"  //stage level variable: inside the stage can acces it will overide pipeline variable
                 steps{
                     sh "echo stage 2 hai"
                     sh "echo stage 2 shell comment"
-                    sh "echo batch name is ${BATCH}"
+                    sh "echo batch name is ${BATCH}" 
                 }
             }
             stage('stage 3'){
                 steps{
                     sh ''' echo stage-3 hai
                            echo stage-3 shell comment
-                           pwd '''
+                           pwd
+                           env
+                       '''
                 }
             }
         
