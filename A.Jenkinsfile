@@ -4,12 +4,12 @@ pipeline{
         GLOBEL = "globel-env"
     }
     stages{
-        stage(stage1){
+        stage('stage1'){
             steps{
                 sh "echo Hi from stage1"
             }
         }
-        stage(stage 2){
+        stage('stage2'){
             steps{
                 sh "echo ${GLOBEL}"
             }
