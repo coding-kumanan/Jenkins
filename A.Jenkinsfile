@@ -8,6 +8,8 @@ pipeline{
             steps{
                 sh "echo Hi from stage1"
             }
+        }
+        stage(stage 2){
             steps{
                 sh "echo ${GLOBEL}"
             }
