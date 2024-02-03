@@ -10,12 +10,14 @@ pipeline {
         choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
-    stages{
-        stage('stage 1'){
-            steps{
-                sh "echo hello world-stage 1"
-                sh "echo stage 1 shell comment"
-                sh "echo globel env variable is ${GLOBEL}"
+    parallel{
+        stages{
+            stage('stage 1'){
+                steps{
+                    sh "echo hello world-stage 1"
+                    sh "echo stage 1 shell comment"
+                    sh "echo globel env variable is ${GLOBEL}"
+                }
             }
         }
             stage('stage 2'){
