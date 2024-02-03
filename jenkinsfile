@@ -18,7 +18,7 @@ pipeline {
                 steps{
                     sh "echo stage 2 hai"
                     sh "echo stage 2 shell comment"
-                    sh "echo batch name is ${BATCH}" 
+                    sh "echo batch name is ${GLOBEL}" 
                 }
             }
             stage('stage 3'){
