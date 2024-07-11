@@ -21,7 +21,7 @@ pipeline {
                     sh "echo batch name is ${GLOBEL}" 
                 }
             }
-            stage('stage 3'){
+            stage('stage 4'){
                 steps{
                     sh ''' echo stage-3 hai
                            echo stage-3 shell comment
